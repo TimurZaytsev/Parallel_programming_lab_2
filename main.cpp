@@ -4,7 +4,6 @@
 #include <cmath>
 #include <chrono>
 
-
 double Ax = -0.353;
 double Bx = 0.353;
 double Ay = 0.3;
@@ -76,8 +75,7 @@ int main(int argc, char **argv) {
                 return 0;
             }
             for(int i = 0; i < 5; ++i)
-                MPI_Send(x0, 5, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
-            
+                MPI_Send(x0, 5, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);           
         }
     }
     MPI_Finalize();
